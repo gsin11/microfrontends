@@ -3,5 +3,25 @@
   "public": false,
   "github": {
     "enabled": false
-  }
+  },
+  "builds": [
+    {
+      "src": "./packages/container/dist/**",
+      "use": "@now/node"
+    },
+    {
+      "src": "./packages/marketing/dist/**",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/$1"
+    },
+    {
+      "src": "/marketing/(.*)",
+      "dest": "dist/marketing/$1"
+    }
+  ]
 }
