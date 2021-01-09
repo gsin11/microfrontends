@@ -24,6 +24,6 @@ jobs:
         uses: amondnet/vercel-action@v20.0.0
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-org-id: ${{ secrets.ORGID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECTID}} #Required 
+          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
           working-directory: packages/container/dist
