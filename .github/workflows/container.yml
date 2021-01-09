@@ -17,13 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: "12.x"
       - name: Install dependencies
-      - run: npm install
+        run: npm install
       - name: Building App
-      - run: npm run build
+        run: npm run build
       - name: Vercel Action
         uses: amondnet/vercel-action@v20.0.0
         with:
